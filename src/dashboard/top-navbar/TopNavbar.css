@@ -1,0 +1,46 @@
+/* ==================== STYLE TOP NAVBAR ==================== */
+.top-navbar {
+    height: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.top-navbar-circle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--Button-Primary-Colors);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+/* top-navbar-submenu Styling */
+.top-navbar-submenu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--Background-Primary-Colors);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px 0;
+    width: 150px;
+}
+
+.top-navbar-submenu li {
+    padding: 10px 15px;
+}
+
+.top-navbar-submenu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.top-navbar-submenu li:hover {
+    background: #f3f4f6;
+}

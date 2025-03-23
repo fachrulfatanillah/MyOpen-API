@@ -10,4 +10,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --Background-Primary-Colors :#FAFAFA;
+
+  --Text-Primary-Colors :#9AA4CA;
+  --Text-Active-Colors : #1A2142;
+
+  --Button-Primary-Colors : #365CF5;
 }

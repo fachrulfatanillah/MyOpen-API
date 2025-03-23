@@ -1,0 +1,228 @@
+/* ==================== STYLE SIDEBAR ==================== */
+.section-sidebar {
+    display: flex;
+}
+  
+.container-sidebar {
+    width: 34vh;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.container-sidebar.collapsed {
+    width: 60px;
+}
+
+.container-title-sidebar {
+    height: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-title-sidebar h1 {
+    font-size: 1.5em;
+}
+
+.container-sidebar .container-sidebar-btn-create-project {
+    height: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-sidebar-btn-create-project .btn-sidebar-create-project {
+    width: 70%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: var(--Button-Primary-Colors);
+    color: #ffffff;
+    border: none;
+}
+
+.container-sidebar-btn-create-project .container-sidebar-btn-create {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: var(--Button-Primary-Colors);
+}
+
+.container-sidebar-btn-create .sidebar-btn-create-icon {
+    font-size: 20px;
+    color: #ffffff;
+}
+  
+.sidebar-menu {
+    position: relative;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+  
+.sidebar-menu a {
+    color: var(--Text-Primary-Colors);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.sidebar-menu .has-submenu a {
+    justify-content: space-between;
+}
+
+.sidebar-menu a:hover {
+    color: var(--Text-Active-Colors);
+}
+
+.sidebar-menu .submenu {
+    list-style: none;
+    padding-left: 30px;
+    display: block;
+}
+
+.sidebar-menu .submenu li {
+    margin-top: 5px;
+}
+
+.menu-icon {
+    font-size: 20px;
+}
+
+.submenu-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.submenu-icon.open {
+    transform: rotate(180deg);
+}
+
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--Button-Primary-Colors);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-toggle::before {
+    transform: translateY(-4px);
+}
+
+.menu-toggle::after {
+    transform: translateY(4px);
+}
+
+.container-sidebar.collapsed .container-title-sidebar h1 {
+    display: none;
+}
+
+.container-sidebar.collapsed .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.container-sidebar.collapsed .container-title-sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2em;
+    padding: 0;
+}
+
+.container-sidebar.collapsed .sidebar-menu {
+    display: block;
+    padding-left: 0;
+}
+
+.container-sidebar.collapsed .sidebar-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-sidebar.collapsed .sidebar-menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-sidebar.collapsed .sidebar-menu a span {
+    display: none;
+}
+
+.container-sidebar.collapsed .menu-icon {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.container-sidebar.collapsed .submenu {
+    position: absolute;
+    top: 55%;
+    left: 100%;
+    width: 140px;
+    padding: 10px;
+    display: block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.container-sidebar.collapsed .btn-sidebar-create-project {
+    display: none;
+}
+
+.container-sidebar.collapsed .container-sidebar-btn-create {
+    display: flex;
+}
+
+
+/* ==================== STYLE PAGE CONTENT ==================== */
+.page-content {
+    padding: 20px;
+}
