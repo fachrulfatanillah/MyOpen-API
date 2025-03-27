@@ -18,7 +18,7 @@ const Container_SideBar = () => {
             <div className={`container-sidebar ${isCollapsed ? "collapsed" : ""}`}>
                 <div className='container-title-sidebar'>
                     <h1>MyOpen-API</h1>
-                    <button className="menu-toggle" onClick={() => setIsCollapsed(!isCollapsed)}></button>
+                    <button className="sidebar-menu-toggle" onClick={() => setIsCollapsed(!isCollapsed)}></button>
                 </div>
 
                 <div className="container-sidebar-btn-create-project">
@@ -31,24 +31,24 @@ const Container_SideBar = () => {
                 <ul className="sidebar-menu">
                     <li>
                         <a href="#">
-                            <FaChartPie className="menu-icon" />
+                            <FaChartPie className="sidebar-menu-icon" />
                             <span className={`menu-text ${isCollapsed ? "hidden" : ""}`}>Dashboard</span>
                         </a>
                     </li>
-                    <li className="has-submenu">
+                    <li className="sidebar-has-submenu">
                         <a href="#" onClick={(e) => {
                                 e.preventDefault();
                                 setIsSubmenuOpen(!isSubmenuOpen);
                             }}>
-                                <FaClipboardList className="menu-icon" />
+                                <FaClipboardList className="sidebar-menu-icon" />
                                 <span className={`menu-text ${isCollapsed ? "hidden" : ""}`}>Projects</span>
                                 {!isCollapsed && ( 
-                                    <FaChevronDown className={`submenu-icon ${isSubmenuOpen ? "open" : ""}`} />
+                                    <FaChevronDown className={`sidebar-submenu-icon ${isSubmenuOpen ? "open" : ""}`} />
                                 )}
                         </a>
                         
                         {isSubmenuOpen && (
-                            <ul className="submenu">
+                            <ul className="sidebar-submenu">
                                 <li><a href="#">Project 1</a></li>
                                 <li><a href="#">Project 2</a></li>
                                 <li><a href="#">Project 3</a></li>
