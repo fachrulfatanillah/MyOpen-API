@@ -18,13 +18,11 @@
     position: relative;
 }
 
-/* top-navbar-submenu Styling */
 .top-navbar-submenu {
     position: absolute;
     top: 60px;
     right: 20px;
-    background: var(--Background-Primary-Colors);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     list-style: none;
     padding: 10px 0;
@@ -42,7 +40,7 @@
 }
 
 .top-navbar-submenu li:hover {
-    background: #f3f4f6;
+    background: var(--Text-Background-Hover);
 }
 
 

@@ -11,9 +11,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   --Background-Primary-Colors :#FAFAFA;
+  --Background-Secondary-Colors : #ffffff;
 
   --Text-Primary-Colors :#9AA4CA;
   --Text-Active-Colors : #1A2142;
+  --Text-Background-Hover : #f3f4f6;
 
   --Button-Primary-Colors : #365CF5;
 }
