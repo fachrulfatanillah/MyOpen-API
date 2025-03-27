@@ -70,10 +70,6 @@
     padding-right: 10px;
 }
   
-.sidebar-menu li {
-    margin-bottom: 10px;
-}
-  
 .sidebar-menu a {
     color: var(--Text-Primary-Colors);
     text-decoration: none;
@@ -81,6 +77,10 @@
     align-items: center;
     padding: 10px;
     gap: 10px;
+}
+
+.sidebar-menu a span {
+    font-size: 1em;
 }
 
 .sidebar-menu .sidebar-has-submenu a {
@@ -95,6 +95,8 @@
     list-style: none;
     padding-left: 30px;
     display: block;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-menu .sidebar-submenu li {
@@ -108,12 +110,12 @@
 .sidebar-submenu-icon {
     margin-left: auto;
     transition: transform 0.3s ease;
+    font-size: 16px;
 }
 
 .sidebar-submenu-icon.open {
     transform: rotate(180deg);
 }
-
 
 .main-content {
     flex-grow: 1;
@@ -126,7 +128,7 @@
     align-items: center;
     justify-content: center;
     width: 40px;
-    height: 40px;
+    height: 3.8em;
     background: none;
     border: none;
     cursor: pointer;
@@ -211,10 +213,29 @@
     width: 140px;
     padding: 10px;
     display: block;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
+.container-sidebar.collapsed .sidebar-submenu li {
+    list-style: none;
+    text-align: left;
+}
+
+.container-sidebar.collapsed .sidebar-submenu a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    color: var(--Text-Primary-Colors);
+    text-decoration: none;
+}
+
+.container-sidebar.collapsed .sidebar-submenu a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
 .container-sidebar.collapsed .btn-sidebar-create-project {
     display: none;
 }
@@ -227,4 +248,123 @@
 /* ==================== STYLE PAGE CONTENT ==================== */
 .page-content {
     padding: 20px;
+}
+
+/* ======== Responsive Styles ======== */
+@media screen and (max-width: 768px) {
+    .main-content {
+        position: absolute;
+        top: 0;
+        left: 60px;
+        width: calc(100% - 60px);
+        background-color: white;
+        z-index: 1;
+    }
+
+    .container-sidebar {
+        position: relative;
+        width: 28vh;
+        z-index: 2;
+    }
+
+    .container-title-sidebar h1 {
+        font-size: 1.2em;
+    }
+
+    .container-sidebar-btn-create-project .btn-sidebar-create-project {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: calc(100% - 50px);
+        background-color: white;
+        z-index: 1;
+    }
+
+    .container-sidebar {
+        position: relative;
+        width: 25vh;
+        z-index: 2;
+    }
+
+    .container-sidebar.collapsed {
+        width: 50px;
+    }
+
+    .container-title-sidebar h1 {
+        font-size: 1em;
+    }
+
+    .sidebar-menu-toggle::before,
+    .sidebar-menu-toggle::after {
+        width: 25px;
+        height: 2.5px;
+    }
+    
+    .container-sidebar-btn-create .sidebar-btn-create-icon {
+        font-size: 18px;
+    }
+
+    .container-sidebar-btn-create-project .btn-sidebar-create-project {
+        width: 100%;
+    }
+    
+    .sidebar-menu a span {
+        font-size: 0.8em;
+    }
+
+    .sidebar-menu .sidebar-submenu li a {
+        font-size: 0.8em;
+    }
+
+    
+    .container-sidebar.collapsed .sidebar-menu-icon {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .main-content {
+        position: absolute;
+        top: 0;
+        left: 45px;
+        width: calc(100% - 45px);
+        background-color: white;
+        z-index: 1;
+    }
+
+    .container-sidebar {
+        position: relative;
+        width: 25vh;
+        z-index: 2;
+    }
+    
+    .container-sidebar.collapsed {
+        width: 45px;
+    }
+
+    .container-sidebar .container-sidebar-btn-create-project {
+        height: 3.2em;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .container-sidebar-btn-create .sidebar-btn-create-icon {
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    .container-sidebar.collapsed .container-sidebar-btn-create-project {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
 }
