@@ -104,6 +104,10 @@
 
 .sidebar-menu a span {
     font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .sidebar-menu .sidebar-has-submenu a {
